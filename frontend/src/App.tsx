@@ -1,11 +1,8 @@
+import { RouterProvider } from "react-router-dom";
+import appRoutes from "./routes/appRoutes";
+
 function App() {
-  return (
-    <div className="min-h-screen bg-blue-500 flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-white">
-        Tailwind Test
-      </h1>
-    </div>
-  )
+  return <RouterProvider router={appRoutes} />;
 }
 
 export default App
