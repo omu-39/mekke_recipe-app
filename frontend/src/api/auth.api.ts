@@ -13,3 +13,7 @@ export const loginUser = async (data: LoginRequest): Promise<void> => {
   await fetchCsrfCookie();
   await client.post("/login", data);
 };
+
+export const logoutUser = async (): Promise<void> => {
+  await client.post("/logout");
+};
