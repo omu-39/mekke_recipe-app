@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  --color-app-background: #f4f0ea;
+  --color-app-ink: #2b2725;
+  --color-app-gray: #939393;
+  --color-app-focus: #84807c;
+}
