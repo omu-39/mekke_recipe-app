@@ -25,4 +25,16 @@ export interface User {
   id: number;
   name: string;
   email: string;
+  avatar_path: string | null;
+}
+
+export interface UpdateProfileInformationRequest {
+  name: string;
+  email: string;
+}
+
+export interface UpdatePasswordRequest {
+  current_password: string;
+  password: string;
+  password_confirmation: string;
 }
