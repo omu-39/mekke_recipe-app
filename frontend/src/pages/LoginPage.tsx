@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from "../api/auth.api";
 import { isAxiosError } from "axios";
-import logo from "../assets/logo.svg";
+import AuthCard from "../components/AuthCard";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -35,13 +35,8 @@ function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-app-background">
-      <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4" noValidate>
-        <div className="flex flex-col items-center mb-10">
-          <img src={logo} alt="メッケのロゴ" className="w-20 h-20 mb-2" />
-          <h1 className="text-3xl font-bold text-app-ink">メッケ</h1>
-        </div>
-
+    <AuthCard subtitle="ログインしてレシピを探す">
+      <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         <div>
           <label htmlFor="email" className="block text-[16px] text-app-ink mb-1 font-bold">
             メールアドレス
@@ -90,7 +85,7 @@ function LoginPage() {
           <Link to="/forgot-password">パスワードをお忘れの方はこちら</Link>
         </p>
       </form>
-    </div>
+    </AuthCard>
   );
 }
 
