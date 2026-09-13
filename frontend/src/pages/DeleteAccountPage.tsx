@@ -43,7 +43,7 @@ function DeleteAccountPage() {
           <button
             type="button"
             onClick={() => setIsConfirming(false)}
-            className="w-full bg-white border border-gray-300 text-app-ink py-3 rounded-lg font-medium cursor-pointer"
+            className="w-full bg-app-white border border-gray-300 text-app-ink py-3 rounded-lg font-medium cursor-pointer"
           >
             キャンセル
           </button>

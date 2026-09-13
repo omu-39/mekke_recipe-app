@@ -54,7 +54,7 @@ function ForgotPasswordPage() {
               placeholder="example@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-1 focus:ring-app-focus"
+              className="w-full bg-app-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-1 focus:ring-app-focus"
             />
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">{errors.email[0]}</p>
