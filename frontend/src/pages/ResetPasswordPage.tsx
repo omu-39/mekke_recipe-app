@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { useNavigate, useParams, useSearchParams, Link } from "react-router-dom";
 import { resetPassword } from "../api/auth.api";
 import { isAxiosError } from "axios";
-import logo from "../assets/logo.svg";
+import AuthCard from "../components/AuthCard";
 
 function ResetPasswordPage() {
   const navigate = useNavigate();
@@ -38,13 +38,8 @@ function ResetPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-app-background">
-      <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4" noValidate>
-        <div className="flex flex-col items-center mb-10">
-          <img src={logo} alt="メッケのロゴ" className="w-20 h-20 mb-2" />
-          <h1 className="text-3xl font-bold text-app-ink">メッケ</h1>
-        </div>
-
+    <AuthCard subtitle="新しいパスワードを設定">
+      <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         <div>
           <label htmlFor="password" className="block text-[16px] text-app-ink font-bold">
             新しいパスワード
@@ -89,7 +84,7 @@ function ResetPasswordPage() {
           <Link to="/login">ログイン画面に戻る</Link>
         </p>
       </form>
-    </div>
+    </AuthCard>
   );
 }
 
