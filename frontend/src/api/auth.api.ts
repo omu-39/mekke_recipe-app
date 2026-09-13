@@ -37,3 +37,7 @@ export const resetPassword = async (
   await fetchCsrfCookie();
   await client.post("/reset-password", data);
 };
+
+export const deleteAccount = async (): Promise<void> => {
+  await client.delete("/account");
+};

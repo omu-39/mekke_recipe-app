@@ -4,6 +4,7 @@ import LoginPage from "../pages/LoginPage";
 import LogoutPage from "../pages/LogoutPage";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
+import DeleteAccountPage from "../pages/DeleteAccountPage";
 
 const appRoutes = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const appRoutes = createBrowserRouter([
   {
     path: "/reset-password/:token",
     element: <ResetPasswordPage />,
+  },
+  {
+    path: "/delete-account",
+    element: <DeleteAccountPage />,
   },
 ]);
 
