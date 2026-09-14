@@ -6,6 +6,7 @@ import ForgotPasswordPage from "../pages/ForgotPasswordPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import DeleteAccountPage from "../pages/DeleteAccountPage";
 import ProfilePage from "../pages/ProfilePage";
+import IngredientPage from "../pages/IngredientPage";
 import PlaceholderPage from "../pages/PlaceholderPage";
 import AppLayout from "../components/AppLayout";
 
@@ -47,7 +48,7 @@ const appRoutes = createBrowserRouter([
       },
       {
         path: "/ingredients",
-        element: <PlaceholderPage />,
+        element: <IngredientPage />,
       },
       {
         path: "/favorites",
