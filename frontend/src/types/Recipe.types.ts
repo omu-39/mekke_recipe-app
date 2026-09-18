@@ -18,6 +18,7 @@ export interface RecipeSearchRequest {
 
 export interface RecipeSearchItem {
     recipe: Recipe;
+    missingIngredientNames: string[];
     missingCount: number;
 }
 

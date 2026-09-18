@@ -10,19 +10,21 @@ class RecipeSearchService
     {
         $recipes = Recipe::with('ingredients')->get();
 
-        $recipesWithMissingCount = $recipes->map(function ($recipe) use ($ownedIngredientIds) {
+        $recipesWithMissingIngredients = $recipes->map(function ($recipe) use ($ownedIngredientIds) {
             $requiredIngredientIds = $recipe->ingredients->pluck('id');
-            $missingCount = $requiredIngredientIds->diff($ownedIngredientIds)->count();
+            $missingIngredientIds = $requiredIngredientIds->diff($ownedIngredientIds);
+            $missingIngredients = $recipe->ingredients->whereIn('id', $missingIngredientIds);
 
             return [
                 'recipe' => $recipe,
-                'missingCount' => $missingCount,
+                'missingIngredientNames' => $missingIngredients->pluck('name'),
+                'missingCount' => $missingIngredientIds->count(),
             ];
         });
 
-        $makeable = $recipesWithMissingCount->where('missingCount', 0)->values();
-        $oneShort = $recipesWithMissingCount->where('missingCount', 1)->values();
-        $multiShortage = $recipesWithMissingCount
+        $makeable = $recipesWithMissingIngredients->where('missingCount', 0)->values();
+        $oneShort = $recipesWithMissingIngredients->where('missingCount', 1)->values();
+        $multiShortage = $recipesWithMissingIngredients
             ->where('missingCount', '>=', 2)
             ->sortBy('missingCount')
             ->values();
