@@ -11,3 +11,11 @@ export interface UserIngredient extends Ingredient {
     ingredient_id: number;
   };
 }
+
+export interface RecipeIngredient extends Ingredient {
+  pivot: {
+    recipe_id: number;
+    ingredient_id: number;
+    quantity: string | null;
+  }
+}
