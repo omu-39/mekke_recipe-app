@@ -29,6 +29,7 @@ function RecipeSearchSection({ title, items }: RecipeSearchSectionProps) {
               return (
                 <RecipeCard
                   key={item.recipe.id}
+                  id={item.recipe.id}
                   name={item.recipe.name}
                   ingredients={item.recipe.ingredients}
                   cooking_time={item.recipe.cooking_time}

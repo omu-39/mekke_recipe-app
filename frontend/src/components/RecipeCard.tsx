@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import type { RecipeIngredient } from "../types/Ingredient.types";
 
 export interface RecipeCardProps {
+    id: number;
     name: string;
     ingredients: RecipeIngredient[];
     cooking_time: number;
@@ -9,6 +11,7 @@ export interface RecipeCardProps {
 }
 
 function RecipeCard({
+    id,
     name,
     ingredients,
     cooking_time,
@@ -16,7 +19,7 @@ function RecipeCard({
     missingIngredientNames,
 }: RecipeCardProps) {
     return (
-      <div className="w-full h-auto rounded-2xl bg-app-white">
+      <Link to={`/recipes/${id}`} className="w-full h-auto rounded-2xl bg-app-white block">
         <div className="w-auto h-auto rounded-2xl mx-3 my-2">
           {image_path ? (
             <img src={image_path} alt={name} className="w-full h-full" />
@@ -34,7 +37,7 @@ function RecipeCard({
             </p>
           )}
         </div>
-      </div>
+      </Link>
     );
 }
 

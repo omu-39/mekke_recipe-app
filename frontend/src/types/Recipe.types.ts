@@ -1,5 +1,10 @@
 import type { RecipeIngredient } from "./Ingredient.types";
 
+export interface RecipeAuthor {
+    id: number;
+    name: string;
+}
+
 export interface Recipe {
     id: number;
     user_id: number;
@@ -10,6 +15,7 @@ export interface Recipe {
     created_at: string;
     updated_at: string;
     ingredients: RecipeIngredient[];
+    user?: RecipeAuthor;
 }
 
 export interface RecipeSearchItem {
