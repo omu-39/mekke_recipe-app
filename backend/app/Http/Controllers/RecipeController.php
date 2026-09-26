@@ -18,7 +18,11 @@ class RecipeController extends Controller
     public function search(Request $request): JsonResponse
     {
         if (! $request->owned_ingredient_ids) {
-            return response()->json([]);
+            return response()->json([
+                'makeable' => [],
+                'oneShort' => [],
+                'multiShortage' => [],
+            ]);
         }
 
         $ownedIngredientIds = array_map('intval', explode(',', $request->owned_ingredient_ids));

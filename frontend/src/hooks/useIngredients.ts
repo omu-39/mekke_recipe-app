@@ -69,6 +69,7 @@ export function useIngredients() {
         errorMessage,
         ownedIds,
         searchQuery,
+        setErrorMessage,
         handleToggle,
         setSearchQuery,
         handleRemove,

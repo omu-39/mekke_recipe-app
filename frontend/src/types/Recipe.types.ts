@@ -12,10 +12,6 @@ export interface Recipe {
     ingredients: RecipeIngredient[];
 }
 
-export interface RecipeSearchRequest {
-    owned_ingredient_ids: number[];
-}
-
 export interface RecipeSearchItem {
     recipe: Recipe;
     missingIngredientNames: string[];

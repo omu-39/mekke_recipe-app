@@ -9,6 +9,7 @@ import ProfilePage from "../pages/ProfilePage";
 import IngredientPage from "../pages/IngredientPage";
 import PlaceholderPage from "../pages/PlaceholderPage";
 import AppLayout from "../components/AppLayout";
+import HomePage from "../pages/HomePage";
 
 const appRoutes = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const appRoutes = createBrowserRouter([
       },
       {
         path: "/home",
-        element: <PlaceholderPage />,
+        element: <HomePage />,
       },
       {
         path: "/ingredients",
