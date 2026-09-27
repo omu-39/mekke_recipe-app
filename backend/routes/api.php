@@ -13,4 +13,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/user-ingredients/{ingredient}', [UserIngredientController::class, 'destroy']);
 
     Route::get('/recipes/search', [RecipeController::class, 'search']);
+    Route::get('/recipes/{recipe}', [RecipeController::class, 'show']);
 });

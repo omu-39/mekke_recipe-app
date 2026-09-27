@@ -10,6 +10,7 @@ import IngredientPage from "../pages/IngredientPage";
 import PlaceholderPage from "../pages/PlaceholderPage";
 import AppLayout from "../components/AppLayout";
 import HomePage from "../pages/HomePage";
+import RecipeDetailPage from "../pages/RecipeDetailPage";
 
 const appRoutes = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const appRoutes = createBrowserRouter([
       {
         path: "/recipes/mine",
         element: <PlaceholderPage />,
+      },
+      {
+        path: "/recipes/:id",
+        element: <RecipeDetailPage />,
       },
     ],
   },
