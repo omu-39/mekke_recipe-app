@@ -19,10 +19,15 @@ function RecipeCard({
     missingIngredientNames,
 }: RecipeCardProps) {
     return (
-      <Link to={`/recipes/${id}`} className="w-full h-auto rounded-2xl bg-app-white block">
+      <Link
+        to={`/recipes/${id}`}
+        className="w-full h-auto rounded-2xl bg-app-white block shadow"
+      >
         <div className="w-auto h-auto rounded-2xl mx-3 my-2">
           {image_path ? (
-            <img src={image_path} alt={name} className="w-full h-full" />
+            <div className="w-auto h-25 border border-app-background rounded">
+              <img src={image_path} alt={name} className="w-full h-full object-cover" />
+            </div>
           ) : (
             <div className="w-full h-25 bg-gray-200 rounded-lg mb-2"></div>
           )}

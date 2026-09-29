@@ -45,7 +45,7 @@ function HomePage() {
         </p>
       </div>
 
-      <div className="bg-app-white rounded-2xl p-6">
+      <div className="bg-app-white rounded-2xl p-6 mb-8">
         <h2 className="font-bold text-black mb-5">所持している食材</h2>
 
         {errorMessage && (

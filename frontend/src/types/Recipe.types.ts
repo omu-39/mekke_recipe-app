@@ -5,16 +5,23 @@ export interface RecipeAuthor {
     name: string;
 }
 
+export interface RecipeStep {
+    id: number;
+    recipe_id: number;
+    step_number: number;
+    content: string;
+}
+
 export interface Recipe {
     id: number;
     user_id: number;
     name: string;
     image_path: string | null;
     cooking_time: number;
-    steps: string;
     created_at: string;
     updated_at: string;
     ingredients: RecipeIngredient[];
+    recipe_steps: RecipeStep[];
     user?: RecipeAuthor;
 }
 
