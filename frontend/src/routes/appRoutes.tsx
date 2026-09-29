@@ -11,6 +11,7 @@ import PlaceholderPage from "../pages/PlaceholderPage";
 import AppLayout from "../components/AppLayout";
 import HomePage from "../pages/HomePage";
 import RecipeDetailPage from "../pages/RecipeDetailPage";
+import RecipePostPage from "../pages/RecipePostPage";
 
 const appRoutes = createBrowserRouter([
   {
@@ -62,7 +63,7 @@ const appRoutes = createBrowserRouter([
       },
       {
         path: "/recipes/create",
-        element: <PlaceholderPage />,
+        element: <RecipePostPage />,
       },
       {
         path: "/recipes/mine",

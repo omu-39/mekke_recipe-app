@@ -25,8 +25,6 @@ function RecipeDetailPage() {
     return <p>読み込み中...</p>;
   }
 
-  const steps = recipe.steps.split("\n");
-
   return (
     <div>
       <div className="bg-app-white rounded-2xl shadow-md overflow-hidden mb-6">
@@ -44,12 +42,12 @@ function RecipeDetailPage() {
       <div className="bg-app-white rounded-2xl shadow-md p-8 mb-6">
         <h2 className="font-bold text-app-ink mb-4">調理手順</h2>
         <ol className="space-y-3">
-          {steps.map((step, index) => (
-            <li key={index} className="flex gap-3">
+          {recipe.recipe_steps.map((step) => (
+            <li key={step.id} className="flex gap-3">
               <span className="flex items-center justify-center w-6 h-6 rounded-full bg-app-ink text-white text-sm shrink-0">
-                {index + 1}
+                {step.step_number}
               </span>
-              <p className="text-app-ink">{step.replace(/^\d+\.\s*/, "")}</p>
+              <p className="text-app-ink">{step.content}</p>
             </li>
           ))}
         </ol>
