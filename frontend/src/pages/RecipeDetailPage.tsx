@@ -32,7 +32,7 @@ function RecipeDetailPage() {
           <img
             src={recipe.image_path}
             alt={recipe.name}
-            className="w-full h-64 object-cover"
+            className="w-full h-120 object-contain"
           />
         ) : (
           <div className="w-full h-64 bg-gray-200" />
