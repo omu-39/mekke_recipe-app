@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Ingredient;
 use App\Models\Recipe;
+use App\Models\RecipeStep;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -23,7 +24,13 @@ class RecipeSeeder extends Seeder
             [
                 'name' => '親子丼',
                 'cooking_time' => 20,
-                'steps' => "1. 玉ねぎを薄切りにする\n2. 鶏肉を一口大に切る\n3. だし・醤油・みりんを煮立て、鶏肉と玉ねぎを加える\n4. 溶き卵を回し入れて蓋をする\n5. ご飯の上に乗せる",
+                'steps' => [
+                    '玉ねぎを薄切りにする',
+                    '鶏肉を一口大に切る',
+                    'だし・醤油・みりんを煮立て、鶏肉と玉ねぎを加える',
+                    '溶き卵を回し入れて蓋をする',
+                    'ご飯の上に乗せる',
+                ],
                 'ingredients' => [
                     '鶏肉' => '200g',
                     '卵' => '2個',
@@ -36,7 +43,12 @@ class RecipeSeeder extends Seeder
             [
                 'name' => '肉じゃが',
                 'cooking_time' => 40,
-                'steps' => "1. じゃがいも・にんじん・玉ねぎを乱切りにする\n2. 牛肉を炒める\n3. 野菜を加えてさらに炒める\n4. だし・醤油・みりん・砂糖を加えて煮込む",
+                'steps' => [
+                    'じゃがいも・にんじん・玉ねぎを乱切りにする',
+                    '牛肉を炒める',
+                    '野菜を加えてさらに炒める',
+                    'だし・醤油・みりん・砂糖を加えて煮込む',
+                ],
                 'ingredients' => [
                     '牛肉' => '200g',
                     'じゃがいも' => '3個',
@@ -51,7 +63,11 @@ class RecipeSeeder extends Seeder
             [
                 'name' => '味噌汁',
                 'cooking_time' => 15,
-                'steps' => "1. だしを取る\n2. 豆腐とわかめを加える\n3. 味噌を溶き入れる",
+                'steps' => [
+                    'だしを取る',
+                    '豆腐とわかめを加える',
+                    '味噌を溶き入れる',
+                ],
                 'ingredients' => [
                     '豆腐' => '1/2丁',
                     'わかめ' => '5g',
@@ -62,7 +78,12 @@ class RecipeSeeder extends Seeder
             [
                 'name' => '野菜炒め',
                 'cooking_time' => 15,
-                'steps' => "1. 野菜を食べやすい大きさに切る\n2. 豚肉を炒める\n3. 野菜を加えて炒める\n4. 塩こしょう・醤油で味付けする",
+                'steps' => [
+                    '野菜を食べやすい大きさに切る',
+                    '豚肉を炒める',
+                    '野菜を加えて炒める',
+                    '塩こしょう・醤油で味付けする',
+                ],
                 'ingredients' => [
                     '豚肉' => '150g',
                     'キャベツ' => '1/4個',
@@ -77,7 +98,12 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'カレーライス',
                 'cooking_time' => 45,
-                'steps' => "1. 野菜と肉を一口大に切る\n2. 鍋で肉と野菜を炒める\n3. 水を加えて煮込む\n4. カレールーを溶かし入れる",
+                'steps' => [
+                    '野菜と肉を一口大に切る',
+                    '鍋で肉と野菜を炒める',
+                    '水を加えて煮込む',
+                    'カレールーを溶かし入れる',
+                ],
                 'ingredients' => [
                     '豚肉' => '250g',
                     'じゃがいも' => '2個',
@@ -88,7 +114,10 @@ class RecipeSeeder extends Seeder
             [
                 'name' => '鶏の照り焼き',
                 'cooking_time' => 20,
-                'steps' => "1. 鶏肉を焼く\n2. 醤油・みりん・砂糖を合わせたタレを加えて煮絡める",
+                'steps' => [
+                    '鶏肉を焼く',
+                    '醤油・みりん・砂糖を合わせたタレを加えて煮絡める',
+                ],
                 'ingredients' => [
                     '鶏肉' => '300g',
                     '醤油' => '大さじ2',
@@ -99,7 +128,10 @@ class RecipeSeeder extends Seeder
             [
                 'name' => '卵焼き',
                 'cooking_time' => 10,
-                'steps' => "1. 卵を溶き、砂糖・醤油を加える\n2. フライパンで巻きながら焼く",
+                'steps' => [
+                    '卵を溶き、砂糖・醤油を加える',
+                    'フライパンで巻きながら焼く',
+                ],
                 'ingredients' => [
                     '卵' => '3個',
                     '砂糖' => '大さじ1',
@@ -109,7 +141,11 @@ class RecipeSeeder extends Seeder
             [
                 'name' => '豚汁',
                 'cooking_time' => 30,
-                'steps' => "1. 豚肉と野菜を炒める\n2. だしを加えて煮込む\n3. 味噌を溶き入れる",
+                'steps' => [
+                    '豚肉と野菜を炒める',
+                    'だしを加えて煮込む',
+                    '味噌を溶き入れる',
+                ],
                 'ingredients' => [
                     '豚肉' => '150g',
                     '大根' => '1/4本',
@@ -122,7 +158,11 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'あさりの酒蒸し',
                 'cooking_time' => 15,
-                'steps' => "1. あさりを砂抜きする\n2. にんにくを炒める\n3. あさりと酒を加えて蒸し煮にする",
+                'steps' => [
+                    'あさりを砂抜きする',
+                    'にんにくを炒める',
+                    'あさりと酒を加えて蒸し煮にする',
+                ],
                 'ingredients' => [
                     'あさり' => '300g',
                     'にんにく' => '1片',
@@ -132,7 +172,11 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'ナポリタン',
                 'cooking_time' => 20,
-                'steps' => "1. パスタを茹でる\n2. ウインナーと玉ねぎ・ピーマンを炒める\n3. パスタとケチャップを加えて炒め合わせる",
+                'steps' => [
+                    'パスタを茹でる',
+                    'ウインナーと玉ねぎ・ピーマンを炒める',
+                    'パスタとケチャップを加えて炒め合わせる',
+                ],
                 'ingredients' => [
                     'パスタ' => '200g',
                     'ウインナー' => '4本',
@@ -144,7 +188,11 @@ class RecipeSeeder extends Seeder
             [
                 'name' => '豆腐サラダ',
                 'cooking_time' => 10,
-                'steps' => "1. 豆腐を食べやすく切る\n2. トマトときゅうりを切る\n3. 盛り付けてポン酢等をかける",
+                'steps' => [
+                    '豆腐を食べやすく切る',
+                    'トマトときゅうりを切る',
+                    '盛り付けてポン酢等をかける',
+                ],
                 'ingredients' => [
                     '豆腐' => '1丁',
                     'トマト' => '1個',
@@ -154,7 +202,11 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'きのこの炊き込みご飯',
                 'cooking_time' => 50,
-                'steps' => "1. 米を研ぐ\n2. きのこを切る\n3. 醤油・みりん・だしと一緒に炊飯する",
+                'steps' => [
+                    '米を研ぐ',
+                    'きのこを切る',
+                    '醤油・みりん・だしと一緒に炊飯する',
+                ],
                 'ingredients' => [
                     '米' => '2合',
                     'しめじ' => '1パック',
@@ -171,7 +223,6 @@ class RecipeSeeder extends Seeder
                 ['name' => $data['name'], 'user_id' => $user->id],
                 [
                     'cooking_time' => $data['cooking_time'],
-                    'steps' => $data['steps'],
                 ],
             );
 
@@ -184,6 +235,15 @@ class RecipeSeeder extends Seeder
             }
 
             $recipe->ingredients()->sync($syncData);
+
+            $recipe->recipeSteps()->delete();
+            foreach ($data['steps'] as $index => $content) {
+                RecipeStep::create([
+                    'recipe_id' => $recipe->id,
+                    'step_number' => $index + 1,
+                    'content' => $content,
+                ]);
+            }
         }
     }
 }
